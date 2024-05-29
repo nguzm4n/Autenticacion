@@ -18,7 +18,7 @@ const Private = () => {
     <div>
       <div className='container'>
         <div className='row d-flex justify-content-center mt-5'>
-        If you are reading this, means you loged in, or signed up
+        If you are reading this, it means you loged in, or signed up
         </div>
       </div>
     </div>

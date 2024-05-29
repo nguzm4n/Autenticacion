@@ -14,7 +14,7 @@ const Login = () => {
 
 
     useEffect(() => {
-        if (store.access_token !== null) navigate("/private")
+        if (store.access_token !== null)  { navigate("/private") }
       }, [store.access_token])
 
       
@@ -27,6 +27,7 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         actions.login({ email, password });
+        
     };
 
     return (

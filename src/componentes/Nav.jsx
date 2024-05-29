@@ -13,18 +13,26 @@ const Nav = () => {
             <div className='row '>
                 <div className='col-md-12 d-flex justify-content-center'>
                     <ul className="nav ">
-                        <li className="nav-item">
+                        {!store.access_token ? 
+                        <>
+                         <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to="/">Log in!</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/signup">Sign Up!</Link>
+                            <Link className="nav-link active" aria-current="page" to="/signup" >Sign Up!</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/Private">Private</Link>
+                            <Link className="nav-link active" aria-current="page" to="/private">Private</Link>
+                        </li>
+                        </> :
+                        <>
+                        <li className="nav-item">
+                            <Link className="nav-link active" aria-current="page" to="/private">Private</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link active" aria-current="page" to="/" onClick={actions.logout}>Log Out</Link>
                         </li>
+                        </>}
                     </ul>
                 </div>
             </div>

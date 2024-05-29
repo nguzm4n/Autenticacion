@@ -71,14 +71,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						
 						const { access_token, user } = datos.datos;
 						setStore({
-							access_token: access_token,
+							access_token: null,
 							current_user: user,
 							email: '',
 							password: '',
 							username: '',
                             name:''
 						});
-						sessionStorage.setItem('access_token', access_token);
+						
 						sessionStorage.setItem('current_user', JSON.stringify(user));
 						cancelForm()
 					}
@@ -90,7 +90,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
             cancelForm: () => {
-				const { setStore } = getActions();
+				
 				setStore({
 					email: "",
 					password: "",

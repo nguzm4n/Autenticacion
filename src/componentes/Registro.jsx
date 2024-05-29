@@ -12,11 +12,13 @@ const Registro = () => {
     const [password, setPassword] = useState("");
     const [name, setName] = useState("")
     const navigate = useNavigate();
-    
+
+
     useEffect(() => {
-        if (store.access_token !== null) navigate("/private")
-      }, [store.access_token])
-    
+        if (store.current_user !== null) {
+            navigate('/')
+        }
+    }, [store.current_user])
 
     return (
         <div className='container'>
